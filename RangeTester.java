@@ -1,3 +1,4 @@
+import java.util.NoSuchElementException;
 public class RangeTester
 {
   public static void main(String[] args)
@@ -38,5 +39,25 @@ public class RangeTester
       }
     }
     System.out.println();
+    IntegerSequence f = new Range(-5,-6);
+    try
+    {
+      System.out.println(f.next());
+    }
+    catch (NoSuchElementException e)
+    {
+      System.out.println(e);
+    }
+    IntegerSequence g = new Range(-4,-3);
+    System.out.println(g.next());
+    System.out.println(g.next());
+    try
+    {
+      System.out.println(g.next());
+    }
+    catch (NoSuchElementException e)
+    {
+      System.out.println(e);
+    }
   }
 }
