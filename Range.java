@@ -20,4 +20,14 @@ public class Range implements IntegerSequence
   {
     return !(current > end);
   }
+  public int next()
+  {
+    if (!hasNext())
+    {
+      throw new NoSuchElementException("Value of " + current + " does not exist in this Range object");
+    }
+    int returnThisValue = current;
+    current += 1;
+    return returnThisValue;
+  }
 }
