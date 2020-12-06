@@ -12,4 +12,8 @@ public class Range implements IntegerSequence
   {
     current = start;
   }
+  public int length()
+  {
+    return (end - start) + 1;
+  }
 }
