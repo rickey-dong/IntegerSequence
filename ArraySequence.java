@@ -11,4 +11,29 @@ public class ArraySequence implements IntegerSequence
       data[i] = other[i];
     }
   }
+  public boolean hasNext()
+  {
+    if (currentIndex >= data.length)
+    {
+      return false;
+    }
+    else
+    {
+      return true;
+    }
+  }
+  public int next()
+  {
+    int returnThisValue = data[currentIndex];
+    currentIndex += 1;
+    return returnThisValue;
+  }
+  public int length()
+  {
+    return data.length;
+  }
+  public void reset()
+  {
+    currentIndex = 0;
+  }
 }
