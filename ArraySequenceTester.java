@@ -8,5 +8,14 @@ public class ArraySequenceTester
     while(as.hasNext()){
     System.out.print(as.next()+", ");
 }
+System.out.println();
+IntegerSequence r = new Range(10,20);
+IntegerSequence As = new ArraySequence(r);
+
+System.out.println("ArraySequence(seq):");
+while(As.hasNext()){
+System.out.print(As.next()+", ");
+}
+System.out.println();
   }
 }
