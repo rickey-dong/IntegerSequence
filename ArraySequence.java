@@ -24,31 +24,24 @@ public class ArraySequence implements IntegerSequence
   }
   public boolean hasNext()
   {
-    if (currentIndex >= data.length)
-    {
-      return false;
-    }
-    else
-    {
-      return true;
-    }
+    return !(this.currentIndex >= this.data.length);
   }
   public int next()
   {
     if (!hasNext())
     {
-      throw new NoSuchElementException("Index of " + currentIndex + " does not exist in this ArraySequence object");
+      throw new NoSuchElementException("Index of " + this.currentIndex + " does not exist in this ArraySequence object");
     }
-    int returnThisValue = data[currentIndex];
-    currentIndex += 1;
+    int returnThisValue = this.data[this.currentIndex];
+    this.currentIndex += 1;
     return returnThisValue;
   }
   public int length()
   {
-    return data.length;
+    return this.data.length;
   }
   public void reset()
   {
-    currentIndex = 0;
+    this.currentIndex = 0;
   }
 }
