@@ -14,11 +14,11 @@ public class ArraySequence implements IntegerSequence
   }
   public ArraySequence(IntegerSequence otherseq)
   {
-    data = new int[otherseq.length()];
+    this.data = new int[otherseq.length()];
     otherseq.reset();
     for (int i = 0; i < otherseq.length(); i++)
     {
-      data[i] = otherseq.next();
+      this.data[i] = otherseq.next();
     }
     otherseq.reset();
   }
