@@ -5,12 +5,12 @@ public class ArraySequence implements IntegerSequence
   private int[] data;
   public ArraySequence(int[] other)
   {
-    data = new int[other.length];
+    this.data = new int[other.length];
     for (int i = 0; i < other.length; i++)
     {
-      data[i] = other[i];
+      this.data[i] = other[i];
     }
-    currentIndex = 0;
+    this.currentIndex = 0;
   }
   public ArraySequence(IntegerSequence otherseq)
   {
